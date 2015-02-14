@@ -7,13 +7,12 @@
 
   {% include head.html %}
 
-  <body class="{{ page.bodyclass }}">
-
     {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+    <div id="container">
+      <div id="content">
+        <div class="entry-content page-content">
+          {{ content }}
+        </div>
       </div>
     </div>
 

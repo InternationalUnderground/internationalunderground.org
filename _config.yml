@@ -12,3 +12,4 @@ github_username:  Intl_undergrnd
 featured_series: the-spirit-of-entrepreneurs
 # Build settings
 markdown: redcarpet
+permalink: /:year/:title

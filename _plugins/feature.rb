@@ -15,7 +15,7 @@ module Jekyll
 			featured_posts = Array.new()
 			posts.each { |x| featured_posts.push(x) if slugs.include?(x.slug) }
 			post = featured_posts[@count]
-			"<h3><a href=\"#{post.url}\">#{post.title}</a></h3><p>#{post.excerpt}\n\n<a href=\"#{post.url}\">Continue Reading →</a></p>"
+			"<h3><a href=\"#{post.url}\">#{post.title}</a></h3><p>#{post.excerpt}<br /><a href=\"#{post.url}\">Continue Reading →</a></p>"
 		end
 	end
 end
