@@ -1,6 +1,6 @@
 {% include head.html %}
 {% include header.html %}
-{% assign series = site.data.series %}
+{% assign series = site.data.series.first %}
 {% capture slug %}{% for s in site.data.series %}{{ s[0] }}{% endfor %}{% endcapture %}
 {% capture title %}{% for s in site.data.series %}{{ s[1].title }}{% endfor %}{% endcapture %}
 {% capture description %}{% for s in site.data.series %}{{ s[1].description }}{% endfor %}{% endcapture %}
@@ -13,7 +13,7 @@
       <div id="index-main-container">
         <div id="index-series">
           <div id="index-photo" >
-            <img width="740" class="attachment-slider-post-thumbnail wp-post-image" src="/assets/beer1.jpg" /><img width="740" class="attachment-slider-post-thumbnail wp-post-image" src="/assets/beer2.jpg" />
+            {% for img in series[1].images %}<img width="740" class="attachment-slider-post-thumbnail wp-post-image" src="/assets/{{img}}" />{% endfor %}
           </div>
           <div class="index-tax-desc">
             <p>{{ description }}</p>

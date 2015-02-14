@@ -15,15 +15,7 @@ module Jekyll
 			featured_posts = Array.new()
 			posts.each { |x| featured_posts.push(x) if slugs.include?(x.slug) }
 			post = featured_posts[@count]
-			"<h3>#{post.title}</h3><p>#{post.excerpt}</p>"
-		end
-	end
-
-	module TruncateWordsFilter
-		def truncatewords(input, words)
-			array = input.scan(/\w+/)
-			output = ""
-			array.each_with_index { |w, i| output += "#{w} " unless i >= words.to_i }
+			"<h3><a href=\"#{post.url}\">#{post.title}</a></h3><p>#{post.excerpt}\n\n<a href=\"#{post.url}\">Continue Reading →</a></p>"
 		end
 	end
 end
