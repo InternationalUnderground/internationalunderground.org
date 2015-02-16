@@ -1,0 +1,24 @@
+language: ruby
+rvm:
+- 2.2
+sudo: false
+script: bundle exec jekyll build
+notifications:
+  email:
+    recipients:
+    - boone.greg@gmail.com
+    on_success: change
+    on_failure: change
+branches:
+  only:
+  - master
+deploy:
+  provider: s3
+  access_key_id: AKIAIQ2MVCB2NDU4PSOQ
+  secret_access_key:
+    secure: KcamLC+cA/qM+VUYAUSauF3jy9/8z+0llwYUZfEsC0BlrJ7pt6GD/sEdzyEGNKTiDAvtpd6SvAKHcmdCRtJNxx4oVCR9r5hMBNyG2yflDDO56zR2wxdd5bHZvs2FYgdJA4+cvSu6Vik0FgF2JmZxlPSFY6bxtUJsuWmz5nqgj2U=
+  bucket: internationalunderground
+  acl: public_read
+  on:
+    repo: InternationalUnderground/internationalunderground.org
+  local_dir: build

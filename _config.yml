@@ -17,3 +17,4 @@ permalink: /:year/:title
 exclude:
 - Gemfile
 - Gemfile.lock
+- vendor
