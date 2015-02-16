@@ -21,4 +21,4 @@ deploy:
   acl: public_read
   on:
     repo: InternationalUnderground/internationalunderground.org
-  local_dir: build
+  local_dir: _site
