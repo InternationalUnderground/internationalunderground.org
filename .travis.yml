@@ -22,3 +22,4 @@ deploy:
   on:
     repo: InternationalUnderground/internationalunderground.org
   local_dir: _site
+  skip_cleanup: true
