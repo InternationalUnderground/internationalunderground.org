@@ -1,22 +1,19 @@
 {% include head.html %}
 {% include header.html %}
-{% assign series = site.data.series.first %}
-{% capture slug %}{% for s in site.data.series %}{{ s[0] }}{% endfor %}{% endcapture %}
-{% capture title %}{% for s in site.data.series %}{{ s[1].title }}{% endfor %}{% endcapture %}
-{% capture description %}{% for s in site.data.series %}{{ s[1].description }}{% endfor %}{% endcapture %}
-{% capture posts %}{% for s in site.data.series %}{{ s[1].posts }}{% endfor %}{% endcapture %}
+{% for feature in site.feature %}
+  {% if site.featured_series == feature.slug %}
   <div id="feature-container">
     <div id="series-title" class="nivo-html-caption">
-      <h2>{{ title }}</h2>
+      <h2><a href="/category/{{series[1].location}}/{{ series[1].url}}">{{ feature.title }}</a></h2>
     </div>
     <div id="content" role="main">
       <div id="index-main-container">
         <div id="index-series">
           <div id="index-photo" >
-            {% for img in series[1].images %}<img width="740" class="attachment-slider-post-thumbnail wp-post-image" src="/assets/{{img}}" />{% endfor %}
+            {% for img in feature.images %}<img width="740" class="attachment-slider-post-thumbnail wp-post-image" src="/assets/{{img}}" />{% endfor %}
           </div>
           <div class="index-tax-desc">
-            <p>{{ description }}</p>
+            <p>{{ feature.content }}</p>
           </div>
         </div>
       </div>
@@ -24,38 +21,20 @@
         <h2>Also in this Series:</h2>
         <div class'hentry'>
           <ul class='entry-title-1'>
-            <li>{% feature_post 0 %}</li>
+            <li>{%  related_post 1 %}</li>
           </ul>
         </div>
         <div class'hentry'>
           <ul class='entry-title-2'>
-            <li>{% feature_post 1 %}</li>
+            <li>{% related_post 2 %}</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  <div id="container">
-    <div id="index-news">
-      <h2 class="news">Recent News:</h2>
-        <section class="posts">
-        {% for post in site.posts %}
-          <div class="post hentry">
-            <h2 class="entry-title"><a href="{{post.url}}">{{ post.title }}</a></h2>
-            <div class="entry-meta">
-              Posted on {{ post.date | date_to_string }} by {{ post.author.display_name }}
-            </div>
-            <div class="entry-content">
-              <p>{{ post.excerpt | strip_html | truncatewords:40 }} <a href="{{ post.url }}">Continue Reading →</a></p>
-              <div class="entry-utility">
-                Series: <a href="">{{ title }}</a>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-        </section>        
-    </div>
-  </div>
+  {% endif %}
+{% endfor %}
+  {{ content }}
 </div>
 
 {% include footer.html %}

@@ -1,0 +1,20 @@
+			<div id="nav-above" class="navigation">
+				{% if page.previous %}
+					<div class="nav-previous">
+						<a href="{{ page.previous.url }}" rel="prev"><span class="meta-nav">←</span> {{ page.previous.title }}</a>
+					</div>
+				{% endif %}
+				{% capture series_title %}{% current_series title %}{% endcapture %}
+				{% if series_title == site.title %}
+					<div class="series-title">
+						Series: <a href="/feature/{% current_series slug %}" rel="tag">{% series_title %}</a>
+					</div>
+				{% else %}
+					<div class="series-title"></div>
+				{% endif %}
+				{% if page.next %}
+					<div class="nav-next">
+						<a href="{{ page.next.url }}" rel="next"> {{ page.next.title }} <span class="meta-nav">→</span></a>
+					</div>
+				{% endif %}
+			</div><!-- #nav-above -->

@@ -18,3 +18,9 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - vendor
+
+# Collections
+collections:
+  feature:
+    permalink: /feature/:slug/
+    output: true
