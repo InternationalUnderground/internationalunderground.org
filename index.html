@@ -7,7 +7,7 @@ feature: the-spirit-of-entrepreneurs
     <div id="index-news">
       <h2 class="news">Recent News:</h2>
         <section class="posts">
-        {% for post in site.posts | offset:2 %}
+        {% for post in site.posts %}
           <div class="post hentry">
             <h2 class="entry-title"><a href="{{post.url}}">{{ post.title }}</a></h2>
             <div class="entry-meta">

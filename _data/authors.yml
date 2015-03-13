@@ -1,23 +1,34 @@
-- afrancisco:
+- name: afrancisco
   email: afrancisco@internationalunderground.org
-  display_name: Andre Francisco
+  full_name: Andre Francisco
   first_name: Andre
   last_name: Francisco
 
-- gboone:
+- name: gboone
   email: gboone@internationalunderground.org
-  display_name: Greg Boone
+  full_name: Greg Boone
   first_name: Greg
   last_name: Boone
 
-- dharms:
+- name: dharms
   email: dharms@internationalunderground.org
-  display_name: Danielle Harms
+  full_name: Danielle Harms
   first_name: Danielle
   last_name: Harms
 
-- awaigand:
+- name: awaigand
   email: awaigand@internationalunderground.org
-  display_name: Anna Waigand
+  full_name: Anna Waigand
   first_name: Anna
   last_name: Waigand
+
+- name: kpederson
+  email: pederson.kristin@gmail.com
+  full_name: Kristin Pederson
+  first_name: Kristin
+  last_name: Pederson
+
+- name: lcorne
+  full_name: Lucy Corne
+  first_name: Lucy
+  last_name: Corne
