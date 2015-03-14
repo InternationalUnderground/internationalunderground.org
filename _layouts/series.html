@@ -7,7 +7,7 @@ layout: default
 <div class="post hentry">
 	<h2 class="entry-title"><a href="{% post_url %}">{% post_title %}</a></h2>
 	<div class="entry-meta">
-		<p>Posted on {% post_date %B %e, %Y %} by {% post_author full_name %}</p>
+		<span>Posted on <a href="{% post_url %}"><span class="entry-date">{% post_date %B %e, %Y %}</span></a> by {% post_author full_name %}</span>
 	</div>
 	<div class="entry-content">
 		<p>{% post_excerpt %}</p>

@@ -3,9 +3,8 @@ layout: default
 bodyclass: single
 ---
 <div class="post hentry">
-
     <h1 class="entry-title">{{ page.title }}</h1>
-    <div class="entry-meta"><h2>By {{ page.author.display_name }}</h2></div>
+    <div class="entry-meta"><h2>By {% for author in page.author %}{{ author | lookup:"authors, full_name" }}{% endfor %}</h2></div>
 
   <article class="post-content">
     {{ content }}

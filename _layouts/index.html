@@ -1,19 +1,19 @@
 {% include head.html %}
 {% include header.html %}
-{% for feature in site.feature %}
-  {% if site.featured_series == feature.slug %}
+{% for series in site.series %}
+  {% if site.featured_series == series.slug %}
   <div id="feature-container">
     <div id="series-title" class="nivo-html-caption">
-      <h2><a href="/category/{{series[1].location}}/{{ series[1].url}}">{{ feature.title }}</a></h2>
+      <h2><a href="{{ series.url}}">{{ series.title }}</a></h2>
     </div>
     <div id="content" role="main">
       <div id="index-main-container">
         <div id="index-series">
           <div id="index-photo" >
-            {% for img in feature.images %}<img width="740" class="attachment-slider-post-thumbnail wp-post-image" src="/assets/{{img}}" />{% endfor %}
+            {% for img in series.images %}<img width="740" class="attachment-slider-post-thumbnail wp-post-image" src="/assets/{{img}}" />{% endfor %}
           </div>
           <div class="index-tax-desc">
-            <p>{{ feature.content }}</p>
+            <p>{{ series.content }}</p>
           </div>
         </div>
       </div>

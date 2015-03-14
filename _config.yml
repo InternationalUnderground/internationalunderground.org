@@ -8,13 +8,13 @@ twitter_username: Intl_undergrnd
 github_username:  Intl_undergrnd
 featured_series: the-spirit-of-entrepreneurs
 # Build settings
-markdown: redcarpet
-permalink: /:year/:title
+markdown: kramdown
+permalink: /:year/:title/
 
 exclude:
 - ".ruby-version"
 # Collections
 collections:
-  feature:
-    permalink: /feature/:title/
+  series:
+    permalink: /series/:title/
     output: true

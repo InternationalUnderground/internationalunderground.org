@@ -46,7 +46,7 @@ module Jekyll
 		end
 		def render(context)
 			post = context.scopes[0]['post'].slug
-			helper =  CollectionHelper.new(context.registers[:site], 'feature')
+			helper =  CollectionHelper.new(context.registers[:site], 'series')
 			series = helper.document_from_post(post)
 			"Series: <a href=\"#{series.url}\">#{series.data['title']}</a>" unless series.nil?
 		end
@@ -61,7 +61,7 @@ module Jekyll
 		def render(context)
 			site = context.registers[:site]
 			posts = site.posts
-			helper = CollectionHelper.new(site, 'feature')
+			helper = CollectionHelper.new(site, 'series')
 			slug = site.config['featured_series']
 			series = helper.document_by_name(slug)
 			post = posts.find { |post| post.slug == series.data['posts'][@count-1] }
@@ -79,7 +79,7 @@ module Jekyll
 		def render(context)
 			page = context.registers[:page]
 			site = context.registers[:site]
-			helper = CollectionHelper.new(site, 'feature')
+			helper = CollectionHelper.new(site, 'series')
 			slug = helper.get_page_name(page)
 			series = helper.document_from_post(slug)
 			unless series.nil?
