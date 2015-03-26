@@ -2,8 +2,8 @@ language: ruby
 rvm:
 - 2.2
 sudo: false
-script: jekyll build
-install: gem install jekyll
+script: ./go build
+install: bundle install
 notifications:
   email:
     recipients:

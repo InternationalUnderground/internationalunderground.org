@@ -10,6 +10,19 @@ featured_series: the-spirit-of-entrepreneurs
 # Build settings
 markdown: kramdown
 permalink: /:year/:title/
+gems:
+  - jekyll-archives
+
+# archives
+jekyll-archives:
+  enabled: 
+    - year
+    - month
+  layout: category_index
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+
 
 exclude:
 - ".ruby-version"
@@ -18,3 +31,5 @@ collections:
   series:
     permalink: /series/:title/
     output: true
+
+full_rebuild: true

@@ -1,0 +1,22 @@
+---
+layout: default
+bodyclass: archive
+---
+{% capture first %}{% for f in page.posts limit:1 %}{% if page.type == "year" %}{{f.date | date:"%Y"}}{% else %} {{f.date | date: "%B %Y"}}{%endif%}{% endfor %}{% endcapture %}
+<h1 class="page-title">Posts from {{first}}</h1>
+<section class="posts"><div class="archive-meta">{{ content }}</div>
+{% for post in page.posts %}
+	<div class="post hentry">
+		<h2 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+		<div class="entry-meta">
+			<span>Posted on <a href="{{  page.url }}"><span class="entry-date">{{ post.date | date: "%B %d, %Y"}}</span></a> by {{ post.author }}</span>
+		</div>
+		<div class="entry-content">
+			<p>{{ post.excerpt }}</p>
+		</div>
+		<div class="entry-utility">
+			Continue reading: <a href="{{ post.url }}">{{ post.title }}</a>
+		</div>
+	</div>
+{% endfor %}
+</section>
