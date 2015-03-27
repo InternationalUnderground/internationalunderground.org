@@ -29,8 +29,8 @@ module Jekyll
       data = Jekyll.sites[0].data[dataset]
       lookup = data.find { |d| d['name'] == input }
       return input if lookup.nil?
-      return key if lookup[key]
-      return lookup
+      return lookup if lookup[key].nil?
+      return lookup[key]
     end
   end
 end
