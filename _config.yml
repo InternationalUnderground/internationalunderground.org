@@ -24,6 +24,13 @@ jekyll-archives:
     month: '/:year/:month/'
 
 
+#defaults
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
 exclude:
 - ".ruby-version"
 # Collections
