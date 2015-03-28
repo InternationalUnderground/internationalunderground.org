@@ -1,0 +1,36 @@
+<div id="primary" role="complementary">
+	<div id="widget-area">
+		<ul class="xoxo">
+		<!--
+			<li id="this-series" class="widget-container">
+							<h2>Also in this Series:</h2>
+										</li>
+			-->
+			<li id="search" class="widget-container widget_search">
+				<form role="search" method="get" id="searchform" class="searchform" action="https://duckduckgo.com">
+					<div>
+						<label class="screen-reader-text" for="s">Search for:</label>
+						<input type="hidden" name="sites" value="{{site.url}}" />
+						<input value="" name="q" id="s" type="text">
+						<input id="searchsubmit" value="Search" type="submit">
+					</div>
+				</form>	</li>
+			<li id="archives" class="widget-container">
+				<h3 class="widget-title">Archives</h3>
+				<ul>
+					<li><a href="/2010/07">July 2010</a></li>
+					<li><a href="/2010/06">June 2010</a></li>
+					<li><a href="/2010/03">March 2010</a></li>
+				</ul>
+			</li>
+			<li id="series-archives" class="widget-container">
+				<h3 class="widget-title">Series</h3>
+				<ul>
+					{% for series in site.series %}
+						<li>{{ series.title }}</li>
+					{% endfor %}
+				</ul>
+			</li>
+		</ul>
+	</div><!-- #primary .widget-area -->
+</div>

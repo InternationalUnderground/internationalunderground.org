@@ -131,7 +131,7 @@ h2, h2 > a, .entry-title a:link {
 
 #container {
 	position: relative;
-	width: 96%
+	width: 740px;
 }
 
 /*
@@ -256,7 +256,7 @@ p {
 
 #index-news > h2, .single h1, .page h1, .archive h1 {
 	position: relative;
-	width: 96%;
+	width: 700px;
 /* 	background-color: #3d7a88; */
 	background-color: hsla(219, 78%, 45%, 1);
 	padding: 10px 20px;

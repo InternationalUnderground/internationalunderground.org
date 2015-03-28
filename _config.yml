@@ -7,11 +7,14 @@ url: "http://internationalunderground.org" # the base hostname & protocol for yo
 twitter_username: Intl_undergrnd
 github_username:  Intl_undergrnd
 featured_series: the-spirit-of-entrepreneurs
+paginate: 5
+paginate_path: "/page/:num/"
 # Build settings
 markdown: kramdown
 permalink: /:year/:title/
 gems:
   - jekyll-archives
+  - jekyll-paginate
 
 # archives
 jekyll-archives:
