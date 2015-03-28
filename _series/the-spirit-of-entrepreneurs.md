@@ -1,5 +1,4 @@
 ---
-layout: series
 title: The Spirit of Entrepreneurs
 location: korea
 slug: the-spirit-of-entrepreneurs

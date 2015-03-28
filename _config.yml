@@ -31,6 +31,10 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+    scope:
+      collection: series
+    values:
+      layout: series
 exclude:
 - ".ruby-version"
 # Collections

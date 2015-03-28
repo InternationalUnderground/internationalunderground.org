@@ -8,6 +8,7 @@ posts:
 - culture-support
 - finding-home-hyehwa
 - place-call-their-own
+bodyclass: archive
 ---
 Korea is home to 50,000 Filipinos who often face long hours and adversity. Each Sunday Filipinos come together in Seoul to run a market, attend mass, get medical care, and enjoy a taste of home. Now the market, a unifying element of this determined community, faces closure.
 
