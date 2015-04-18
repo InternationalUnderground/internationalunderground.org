@@ -2,7 +2,7 @@
 title: International Underground
 email: greg@harmsboone.org
 description: Unseen, unheard, uncovered
-baseurl: "/" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://internationalunderground.org" # the base hostname & protocol for your site
 twitter_username: Intl_undergrnd
 github_username:  Intl_undergrnd
@@ -18,7 +18,7 @@ gems:
 
 # archives
 jekyll-archives:
-  enabled: 
+  enabled:
     - year
     - month
   layout: category_index

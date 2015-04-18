@@ -1,9 +1,9 @@
 # author:: Greg Boone boone.greg@gmail.com
 # license:: CC0
 module Jekyll
-	
+
 	class CollectionHelper
-		
+
 		def initialize(site, collection)
 			@posts = site.posts
 			@collection = collection
@@ -21,7 +21,7 @@ module Jekyll
 			docs = @docs
 			return docs.find { |doc| doc.data['posts'].include?(name) }
 		end
-		
+
 		# returns the name from a page object
 		# for some reason jekyll doesn't include 'name' in context.registers[:page]
 		def get_page_name(page)
@@ -57,7 +57,7 @@ module Jekyll
 			super
 			@count = value.to_i
 		end
-		
+
 		def render(context)
 			site = context.registers[:site]
 			posts = site.posts
@@ -97,7 +97,7 @@ module Jekyll
 
 	class PostTitleTag < Liquid::Tag
 			# This is a class written to help relate posts and collections. It assumes,
-			# like other classes in this plugin, that you define which posts belong to 
+			# like other classes in this plugin, that you define which posts belong to
 			# collection in the collection document's front matter.
 			#
 			# Given a collection "series," define a `posts` entry in the front matter:
@@ -113,7 +113,7 @@ module Jekyll
 			end
 
 			# Grabs post information for posts in collection @value
-			# 
+			#
 			# Assumes you are rendering a colleciton document
 			def render(context)
 				tag = @tag.split('_')[1]
@@ -126,18 +126,6 @@ module Jekyll
 				post_object = posts.find { |p| p.slug ==  post}
 				answer = get_post_part(post_object, tag, value)
 				return answer
-				# if @tag == "post_title"
-				# 	require 'pry'; binding.pry
-				# 	return post_object.title
-				# elsif @tag == "post_date"
-				# 	return post_object.date
-				# elsif @tag == "post_author"
-				# 	return post_object.data['author']
-				# elsif @tag == "post_excerpt"
-				# 	return post_object.excerpt
-				# else
-				# 	return post_object
-				# end
 			end
 
 			def get_post_part(post, tag, value)

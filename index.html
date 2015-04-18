@@ -5,7 +5,11 @@ series: the-spirit-of-entrepreneurs
 ---
 <div id="container">
     <div id="index-news">
+    {% if paginator.page == 1 %}
       <h2 class="news">Recent News:</h2>
+    {% else %}
+      <h2 class="news">Archive: Page {{ paginator.page }}</h2>
+    {% endif %}
         <section class="posts">
         {% for post in paginator.posts %}
           <div class="post hentry">
@@ -21,6 +25,9 @@ series: the-spirit-of-entrepreneurs
             </div>
           </div>
         {% endfor %}
-        </section>        
+        {% unless paginator.page == paginator.total_pages %}
+          <a href="{{ paginator.next_page_path}}">More stories from the International Underground archive</a>
+        {% endunless %}
+        </section>
     </div>
   </div>
